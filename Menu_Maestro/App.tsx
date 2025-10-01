@@ -2,15 +2,17 @@ import React, { useState, useEffect } from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { MenuItem } from './types';
-import HomeScreen from '';
-import AddEditItemScreen from '';
-import FilterScreen from '';
+import HomeScreen from './HomeScreen';
+import AddEditItemScreen from './AddEditItemScreen';
+import FilterScreen from './FilterScreen';
 
-// Define stack navigator for type safety
 const Stack = createNativeStackNavigator<{
-  Home: { newItem?: MenuItem }; // Home screen can receive a new item as a parameter
-  AddEdit: undefined;
-  Filter: undefined;
+  // Home: Receives a saved item (add/edit), an item ID to remove, and active filter criteria
+  Home: { savedItem?: MenuItem; itemToRemoveId?: string; activeFilters?: MenuItem['course'][] };
+  // AddEdit: Receives an optional item to populate the form for editing
+  AddEdit: { itemToEdit?: MenuItem };
+  // Filter: Receives the current active filters to pre-select options
+  Filter: { currentFilters?: MenuItem['course'][] }; 
 }>();
 
 const App: React.FC = () => {
