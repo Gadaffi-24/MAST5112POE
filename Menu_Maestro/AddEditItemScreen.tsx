@@ -1,4 +1,3 @@
-// screens/AddEditItemScreen.tsx
 import React, { useState, useEffect } from 'react';
 import { View, Text, TextInput, Button, StyleSheet, Alert } from 'react-native';
 import { Picker } from '@react-native-picker/picker';
@@ -28,6 +27,7 @@ const AddEditItemScreen: React.FC<Props> = ({ navigation, route }) => {
   const [description, setDescription] = useState(itemToEdit?.description || '');
   const [priceText, setPriceText] = useState(itemToEdit?.price ? itemToEdit.price.toFixed(2) : '');
   const [course, setCourse] = useState<MenuItem['course']>(itemToEdit?.course || COURSE_OPTIONS[0]);
+  const [image, setImage] = useState(itemToEdit?.image || ''); // New: image path
 
   // Set the screen title dynamically
   useEffect(() => {
@@ -56,6 +56,7 @@ const AddEditItemScreen: React.FC<Props> = ({ navigation, route }) => {
       description,
       price: newPrice,
       course,
+      image,
     };
 
     // Send the item back to the Home screen using the 'savedItem' parameter

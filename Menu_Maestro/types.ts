@@ -3,6 +3,7 @@ export interface MenuItem {
   dishName: string;
   description: string;
   price: number;
+  image: string;
   course: 'Starter' | 'Main Dish' | 'Dessert'; // Defined courses
 }
 

@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { View, Text, StyleSheet, Button, Switch, ScrollView } from 'react-native';
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
 import { COURSE_OPTIONS, MenuItem } from './types';
-
+ 
 // Define the navigation types for this screen
 type RootStackParamList = {
   Home: { savedItem?: MenuItem; itemToRemoveId?: string; activeFilters?: MenuItem['course'][] };

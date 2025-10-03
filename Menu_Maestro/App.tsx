@@ -24,6 +24,7 @@ const App: React.FC = () => {
       description: 'Classic patty with all the fixings.',
       price: 12.5,
       course: 'Main Dish',
+      image: 'Menu_Maestro/images/burgerbilly.jpg'
     },
     {
       id: '2',
@@ -31,6 +32,7 @@ const App: React.FC = () => {
       description: 'A light and zesty starter.',
       price: 6.0,
       course: 'Starter',
+      image: 'Menu_Maestro/images/salad.jpg'
     },
   ]);
 

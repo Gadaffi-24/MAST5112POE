@@ -1,12 +1,11 @@
 import React, { useEffect, useCallback, useState } from 'react'; // ADDED useState
 import { View, FlatList, Button, StyleSheet, Alert } from 'react-native';
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
-// Assuming these are the correct relative paths in your project structure
 import { MenuItem } from './types'; 
 import MenuSummary from './components/MenuSummary';
 import MenuItemCard from './components/MenuItemCard';
 
-// FIX: Update the RootStackParamList to reflect all parameters used in navigation.navigate()
+// RootStackParamList to reflect all parameters used in navigation.navigate()
 type RootStackParamList = {
   // Home: Receives data back from AddEdit or Filter
   Home: { savedItem?: MenuItem; itemToRemoveId?: string; activeFilters?: MenuItem['course'][] }; // ADDED activeFilters
