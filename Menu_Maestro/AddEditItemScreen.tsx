@@ -103,7 +103,7 @@ const AddEditItemScreen: React.FC<Props> = ({ navigation, route }) => {
       <Text style={styles.label}>Price</Text>
       <TextInput
         style={styles.input}
-        placeholder="0.00"
+        placeholder="e.g. 120.98"
         value={priceText}
         onChangeText={setPriceText}
         keyboardType="numeric"
